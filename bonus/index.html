@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/style.css">
+        <title>Vue To Do List Bonus</title>
+    </head>
+    <body>
+        <div id="app">
+            <main class="container">
+                <!-- sezione logo -->
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                </div>
+
+                <!-- SEZIONE INPUT -->
+                <div class="add-task">
+                    <input type="text" placeholder="Nuova Task" v-model="newTask.text">
+
+                    <button v-on:click="addTask()">Aggiungi</button>
+                </div>
+
+                <!-- sezione lista -->
+                <div class="list-container">
+                    <ul v-if="tasks.length > 0">
+                        <!-- Inizio item ------------------->
+                        <li
+                         class="task clearfix"
+                         v-for="(task, index) in tasks"
+                         v-on:click="doneMarkClick(index)"
+                         v-bind:class="tasks[index].done ? 'done-mark' : ''"
+                        >
+                            {{ tasks[index].text }}
+
+                            <i class="fa-solid fa-xmark" @click="removeTask(index)"></i>
+                        </li>
+                        <!-- Fine item --------------------->
+                    </ul>
+                    <h2 v-else>
+                        Bravo! Hai completato tutti i compiti!
+                    </h2>
+                </div>
+            </main>
+        </div>
+        
+        <!-- COLLEGAMENTO VUEJS E FILE JAVASCRIPT -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

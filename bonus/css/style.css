@@ -1,0 +1,78 @@
+/* RESET ********************************************/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* REGOLE GENERALI **********************************/
+.container {
+    margin: 0 auto;
+}
+
+/* SEZIONE LOGO *************************************/
+.logo {
+    height: 10vh;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.logo > img {
+    height: 100%;
+}
+
+/* SEZIONE INPUT ***********************************/
+.add-task {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+input,
+button {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+input {
+    margin-right: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* SEZIONE LISTA ***********************************/
+.list-container {
+    background-color: lightgray;
+    width: 70vw;
+    min-height: 10wh;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 2rem;
+}
+
+.list-container > ul {
+    list-style: none;
+}
+
+.task {
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.done-mark {
+    text-decoration: line-through;
+}
+
+.fa-xmark {
+    float: right;
+    cursor: pointer;
+}
