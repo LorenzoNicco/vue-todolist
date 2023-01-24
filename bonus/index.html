@@ -19,7 +19,11 @@
 
                 <!-- SEZIONE INPUT -->
                 <div class="add-task">
-                    <input type="text" placeholder="Nuova Task" v-model="newTask.text">
+                    <input type="text"
+                     placeholder="Nuova Task"
+                     v-model="newTask.text"
+                     @keyup.enter="addTask()"
+                    >
 
                     <button v-on:click="addTask()">Aggiungi</button>
                 </div>
