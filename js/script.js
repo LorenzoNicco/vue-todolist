@@ -22,7 +22,32 @@ const { createApp } = Vue;
 createApp ({
     data () {
         return {
-            
+            tasks: [
+                {
+                    text: "Comprare il pane",
+                    done: false
+                },
+                {
+                    text: "Fare i compiti",
+                    done: false
+                },
+                {
+                    text: "Fare benzina",
+                    done: false
+                },
+                {
+                    text: "Comprare il giornale",
+                    done: false
+                },
+                {
+                    text: "Andare al bar",
+                    done: false
+                },
+                {
+                    text: "Fare la lavatrice",
+                    done: false
+                },
+            ]
         }
     }
 }).mount('#app');
