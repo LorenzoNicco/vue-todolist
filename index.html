@@ -17,12 +17,20 @@
                     <img src="logo.png" alt="">
                 </div>
 
+                <!-- SEZIONE INPUT -->
+                <div class="add-task">
+                    <input type="text" placeholder="Nuova Task" v-model="newTask.text">
+
+                    <button v-on:click="addTask()">Aggiungi</button>
+                </div>
+
                 <!-- sezione lista -->
                 <div class="list-container">
                     <ul>
                         <li
                          class="task clearfix"
                          v-for="(task, index) in tasks"
+                         v-on:click="doneMarkClick(index)"
                          v-bind:class="tasks[index].done ? 'done-mark' : ''"
                         >
                             {{ tasks[index].text }}

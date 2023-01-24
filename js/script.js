@@ -47,12 +47,29 @@ createApp ({
                     text: "Fare la lavatrice",
                     done: false
                 },
-            ]
+            ],
+            newTask: {
+                text: "",
+                done: false
+            }
         }
     },
     methods: {
         removeTask: function (index) {
             this.tasks.splice(index, 1);
+        },
+        addTask: function () {
+            this.tasks.push(this.newTask);
+            this.newTask = {text: "", done: false};
+            console.log(this.tasks);
+        },
+        doneMarkClick: function (index) {
+            if (this.tasks[index].done == true) {
+                this.tasks[index].done = false;
+            }
+            else {
+                this.tasks[index].done = true
+            }
         }
     }
 }).mount('#app');
