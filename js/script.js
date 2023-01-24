@@ -29,11 +29,11 @@ createApp ({
                 },
                 {
                     text: "Fare i compiti",
-                    done: false
+                    done: true
                 },
                 {
                     text: "Fare benzina",
-                    done: false
+                    done: true
                 },
                 {
                     text: "Comprare il giornale",

@@ -20,8 +20,12 @@
                 <!-- sezione lista -->
                 <div class="list-container">
                     <ul>
-                        <li class="task">
-
+                        <li
+                         class="task"
+                         v-for="(task, index) in tasks"
+                         v-bind:class="tasks[index].done ? 'done-mark' : ''"
+                        >
+                            {{ tasks[index].text }}
                         </li>
                     </ul>
                 </div>

@@ -28,7 +28,7 @@
     min-height: 10wh;
     border-radius: 20px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 20px;
     margin-top: 2rem;
 }
 
@@ -39,4 +39,8 @@
 .task {
     border-bottom: 1px solid gray;
     padding: 10px;
+}
+
+.done-mark {
+    text-decoration: line-through;
 }
