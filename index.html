@@ -26,7 +26,8 @@
 
                 <!-- sezione lista -->
                 <div class="list-container">
-                    <ul>
+                    <ul v-if="tasks.length > 0">
+                        <!-- Inizio item ------------------->
                         <li
                          class="task clearfix"
                          v-for="(task, index) in tasks"
@@ -37,7 +38,11 @@
 
                             <i class="fa-solid fa-xmark" @click="removeTask(index)"></i>
                         </li>
+                        <!-- Fine item --------------------->
                     </ul>
+                    <h2 v-else>
+                        Bravo! Hai completato tutti i compiti!
+                    </h2>
                 </div>
             </main>
         </div>
