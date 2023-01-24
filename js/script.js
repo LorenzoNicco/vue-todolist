@@ -49,5 +49,10 @@ createApp ({
                 },
             ]
         }
+    },
+    methods: {
+        removeTask: function (index) {
+            this.tasks.splice(index, 1);
+        }
     }
 }).mount('#app');

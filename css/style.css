@@ -41,6 +41,17 @@
     padding: 10px;
 }
 
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .done-mark {
     text-decoration: line-through;
+}
+
+.fa-xmark {
+    float: right;
+    cursor: pointer;
 }

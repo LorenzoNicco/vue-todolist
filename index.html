@@ -21,11 +21,13 @@
                 <div class="list-container">
                     <ul>
                         <li
-                         class="task"
+                         class="task clearfix"
                          v-for="(task, index) in tasks"
                          v-bind:class="tasks[index].done ? 'done-mark' : ''"
                         >
                             {{ tasks[index].text }}
+
+                            <i class="fa-solid fa-xmark" @click="removeTask(index)"></i>
                         </li>
                     </ul>
                 </div>
