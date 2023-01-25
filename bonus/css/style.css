@@ -59,6 +59,9 @@ button {
 .task {
     border-bottom: 1px solid gray;
     padding: 10px;
+}
+
+.li-text {
     cursor: pointer;
 }
 

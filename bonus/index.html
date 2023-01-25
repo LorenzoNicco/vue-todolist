@@ -36,11 +36,10 @@
                          class="task clearfix"
                          v-for="(task, index) in tasks"
                          v-on:click="doneMarkClick(index)"
-                         v-bind:class="tasks[index].done ? 'done-mark' : ''"
                         >
-                            {{ tasks[index].text }}
+                            <span class="li-text" v-bind:class="tasks[index].done ? 'done-mark' : ''">{{ tasks[index].text }}</span>
 
-                            <i class="fa-solid fa-xmark" @click="removeTask(index)"></i>
+                            <i class="fa-solid fa-xmark" @click.stop="removeTask(index)"></i>
                         </li>
                         <!-- Fine item --------------------->
                     </ul>

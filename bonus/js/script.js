@@ -59,8 +59,11 @@ createApp ({
             this.tasks.splice(index, 1);
         },
         addTask: function () {
-            this.tasks.push(this.newTask);
-            this.newTask = {text: "", done: false};
+            this.tasks.push({
+                text: this.newTask.text,
+                done: this.newTask.done
+            });
+            this.newTask.text = "";
             console.log(this.tasks);
         },
         doneMarkClick: function (index) {
