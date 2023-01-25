@@ -36,7 +36,7 @@
                         >
                             {{ tasks[index].text }}
 
-                            <i class="fa-solid fa-xmark" @click="removeTask(index)"></i>
+                            <i class="fa-solid fa-xmark" @click.stop="removeTask(index)"></i>
                         </li>
                         <!-- Fine item --------------------->
                     </ul>
